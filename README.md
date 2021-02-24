@@ -1,7 +1,6 @@
 # TW_stock_info
 爬取每日台股資訊(大盤資訊、三大法人資訊)的爬蟲程式。
 
-
 ![alt text](https://i.imgur.com/W4vDIf2.png)
 
 ## stock_crawler.py
