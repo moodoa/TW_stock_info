@@ -18,7 +18,6 @@ if __name__ == "__main__":
     market = stock.market_output_writer()
     investor = stock.three_ins_output_writer()
     print(market)
-    print("*" * 100)
     print(investor)
 
 ```
