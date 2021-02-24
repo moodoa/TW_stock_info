@@ -6,7 +6,6 @@ import requests
 from bs4 import BeautifulSoup
 from datetime import datetime, timedelta
 
-
 class Stockfeeder_TW:
     def _get_market_info(self):
         headers = {"Referer": "https://mis.twse.com.tw/stock/twse_chart.html"}
@@ -84,7 +83,7 @@ class Stockfeeder_TW:
             headers=headers,
         ).text
         stock_info = json.loads(text)
-        sectors = ast.literal_eval(stock_info["Class"])
+        sectors = eval(stock_info["Class"])
         pattern = r"y:(-*\d.\d+)"
         risings = re.findall(pattern, stock_info["Ratio"])
         pattern = r"url:'/twclass/([A-Z].\d+)"
